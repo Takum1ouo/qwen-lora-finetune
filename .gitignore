@@ -1,0 +1,29 @@
+# Model weights, LoRA adapters and training outputs (never commit)
+outputs/
+checkpoint-*/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.gguf
+
+# Scratch experiments
+scratch/
+
+# Logs
+*.log
+
+# Secrets
+.env
+*.key
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/

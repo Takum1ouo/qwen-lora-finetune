@@ -1,0 +1,11 @@
+# Tested with Python 3.11 on Windows 11, RTX 4070 Laptop (8 GB).
+# Install the CUDA build of PyTorch first (see README), e.g.:
+#   pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cu126
+torch==2.14.1
+transformers==5.20.2
+peft==0.21.2
+datasets==5.1.0
+accelerate==1.15.0
+pandas==3.0.6
+# only needed to run the notebook locally
+ipykernel
