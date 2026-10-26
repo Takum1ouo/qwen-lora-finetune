@@ -2,7 +2,7 @@
 
 A small, end-to-end LoRA experiment: fine-tune a 0.5B-parameter instruction model to classify financial news tweets as **Bearish / Bullish / Neutral**, and compare it with the untouched base model on a held-out test set. A second run doubles the LoRA rank (r=8 vs r=16) to see whether the extra capacity helps.
 
-This is a learning project. It runs on a single 8 GB laptop GPU, and all numbers below come from the runs saved in [`lora_finetune.ipynb`](lora_finetune.ipynb).
+The experiment runs on a single 8 GB laptop GPU. All numbers below come from the runs saved in [`lora_finetune.ipynb`](lora_finetune.ipynb).
 
 ## Setup
 
@@ -55,7 +55,7 @@ Test set: 2,388 tweets.
 | **LoRA r=8** | **0.882** | **0.848** | 0.805 | 0.824 | 0.915 | 1.000 |
 | **LoRA r=16** | **0.891** | **0.859** | 0.814 | 0.841 | 0.922 | 1.000 |
 
-Training on an RTX 4070 Laptop GPU (8 GB): 597 optimizer steps, peak GPU memory 2.65 GB (r=8) / 2.66 GB (r=16). Wall-clock time per run was about 6 minutes when run from the command line and 8-23 minutes inside the notebook run; I did not control for other load on the laptop, so treat the timings as rough.
+Training on an RTX 4070 Laptop GPU (8 GB): 597 optimizer steps, peak GPU memory 2.65 GB (r=8) / 2.66 GB (r=16). Wall-clock time per run was about 6 minutes from the command line and 8-23 minutes in the notebook run. Other load on the laptop was not controlled, so the timings are approximate.
 
 ### What the numbers show
 
@@ -116,4 +116,4 @@ requirements.txt     pinned library versions
 
 ## Acknowledgements
 
-The overall workflow follows the LoRA lesson of the Chinese tutorial series [zyds/transformers-code](https://github.com/zyds/transformers-code) ("手把手带你实战 HuggingFace Transformers"). That repository has no license, so no code is copied from it; the code here is written for this project, Qwen2.5 and transformers 5.x.
+The overall workflow follows the LoRA lesson of the Chinese-language Hugging Face Transformers tutorial series [zyds/transformers-code](https://github.com/zyds/transformers-code). That repository has no license, so no code is copied from it; the code here is written for this project, Qwen2.5 and transformers 5.x.

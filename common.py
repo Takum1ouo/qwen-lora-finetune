@@ -3,7 +3,7 @@ import torch
 
 MODEL_NAME = "Qwen/Qwen2.5-0.5B-Instruct"
 DATASET_NAME = "zeroshot/twitter-financial-news-sentiment"
-TEST_SPLIT = "validation"  # the dataset has no official test split; we never train on this one
+TEST_SPLIT = "validation"  # the dataset has no official test split; this split is held out from training
 LABELS = ["Bearish", "Bullish", "Neutral"]  # list index == dataset label id
 
 INSTRUCTION = (
